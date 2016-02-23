@@ -12,6 +12,9 @@ namespace SigaSom
 {
     public partial class Form1 : Form
     {
+
+
+        int nivel;
         public Form1()
         {
             InitializeComponent();
@@ -19,39 +22,56 @@ namespace SigaSom
 
         private void button5_Click(object sender, EventArgs e)
         {
-            button1.Enabled = true;
-            button2.Enabled = true;
-            button3.Enabled = true;
-            button4.Enabled = true;
+           
             Random rnd = new Random();
             int but = rnd.Next(1, 5);
             switch (but)
             {
                 case 1:
-                    button1.BackColor = Color.DeepPink;
+                    button1.BackColor = Color.HotPink;
                     System.Media.SystemSounds.Beep.Play();
+                    System.Threading.Thread.Sleep(1000);
+                    button1.BackColor = Color.Blue;
                     break;
                 case 2:
-                    button2.BackColor = Color.DeepPink;
+                    button2.BackColor = Color.HotPink;
                     System.Media.SystemSounds.Asterisk.Play();
+                    System.Threading.Thread.Sleep(1000);
+                    button2.BackColor = Color.Yellow;
                     break;
                 case 3:
-                    button3.BackColor = Color.DeepPink;
+                    button3.BackColor = Color.HotPink;
                     System.Media.SystemSounds.Exclamation.Play();
+                    System.Threading.Thread.Sleep(1000);
+                    button3.BackColor = Color.Red;
                     break;
                 case 4:
-                    button4.BackColor = Color.DeepPink;
+                    button4.BackColor = Color.HotPink;
                     System.Media.SystemSounds.Hand.Play();
+                    System.Threading.Thread.Sleep(1000);
+                    button4.BackColor = Color.Green;
                     break;
             }
+
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            button1.Enabled = false;
-            button2.Enabled = false;
-            button3.Enabled = false;
-            button4.Enabled = false;
+            
+            button1.Enabled = true;
+            button1.BackColor = Color.Blue;
+            button2.Enabled = true;
+            button2.BackColor = Color.Yellow;
+            button3.Enabled = true;
+            button3.BackColor = Color.Red;
+            button4.Enabled = true;
+            button4.BackColor = Color.Green;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
