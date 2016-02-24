@@ -39,46 +39,51 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Blue;
             this.button1.Location = new System.Drawing.Point(12, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(124, 92);
             this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.Yellow;
             this.button2.Location = new System.Drawing.Point(230, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(124, 92);
             this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.Red;
             this.button3.Location = new System.Drawing.Point(230, 202);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(124, 92);
             this.button3.TabIndex = 2;
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.Green;
             this.button4.Location = new System.Drawing.Point(12, 202);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(124, 92);
             this.button4.TabIndex = 3;
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // button_Start
             // 
+            this.button_Start.BackColor = System.Drawing.Color.White;
             this.button_Start.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.button_Start.Location = new System.Drawing.Point(230, 138);
             this.button_Start.Name = "button_Start";
             this.button_Start.Size = new System.Drawing.Size(104, 31);
             this.button_Start.TabIndex = 4;
             this.button_Start.Text = "Start";
-            this.button_Start.UseVisualStyleBackColor = true;
+            this.button_Start.UseVisualStyleBackColor = false;
             this.button_Start.Click += new System.EventHandler(this.button5_Click);
             // 
             // label1

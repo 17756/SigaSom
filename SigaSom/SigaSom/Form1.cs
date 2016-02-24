@@ -12,9 +12,6 @@ namespace SigaSom
 {
     public partial class Form1 : Form
     {
-
-
-        int nivel;
         public Form1()
         {
             InitializeComponent();
@@ -28,25 +25,25 @@ namespace SigaSom
             switch (but)
             {
                 case 1:
-                    button1.BackColor = Color.HotPink;
+                    button1.ForeColor = Color.Chocolate;
                     System.Media.SystemSounds.Beep.Play();
                     System.Threading.Thread.Sleep(1000);
                     button1.BackColor = Color.Blue;
                     break;
                 case 2:
-                    button2.BackColor = Color.HotPink;
+                    button2.ForeColor = Color.Chocolate;
                     System.Media.SystemSounds.Asterisk.Play();
                     System.Threading.Thread.Sleep(1000);
                     button2.BackColor = Color.Yellow;
                     break;
                 case 3:
-                    button3.BackColor = Color.HotPink;
+                    button3.ForeColor = Color.Chocolate;
                     System.Media.SystemSounds.Exclamation.Play();
                     System.Threading.Thread.Sleep(1000);
                     button3.BackColor = Color.Red;
                     break;
                 case 4:
-                    button4.BackColor = Color.HotPink;
+                    button4.ForeColor = Color.Chocolate;
                     System.Media.SystemSounds.Hand.Play();
                     System.Threading.Thread.Sleep(1000);
                     button4.BackColor = Color.Green;
