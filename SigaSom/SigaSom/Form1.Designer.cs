@@ -55,6 +55,7 @@
             this.button2.Size = new System.Drawing.Size(124, 92);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -64,6 +65,7 @@
             this.button3.Size = new System.Drawing.Size(124, 92);
             this.button3.TabIndex = 2;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -73,6 +75,7 @@
             this.button4.Size = new System.Drawing.Size(124, 92);
             this.button4.TabIndex = 3;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button_Start
             // 
@@ -84,7 +87,7 @@
             this.button_Start.TabIndex = 4;
             this.button_Start.Text = "Start";
             this.button_Start.UseVisualStyleBackColor = false;
-            this.button_Start.Click += new System.EventHandler(this.button5_Click);
+            this.button_Start.Click += new System.EventHandler(this.buttonStart_Click);
             // 
             // label1
             // 
