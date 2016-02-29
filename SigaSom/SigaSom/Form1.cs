@@ -35,7 +35,7 @@ namespace SigaSom
     }
     public partial class Form1 : Form
     {
-        int nivel = 1;
+        int nivel = 0;
 
         int but;
         List<int> Simon = new List<int>();
@@ -65,8 +65,8 @@ namespace SigaSom
                     case 4: button4.BackColor = Color.White; break;
                 }
 
-                Thread.Sleep(2000);
-                //  MessageBox.Show(a.ToString());
+                
+                MessageBox.Show(a.ToString());
                 Console.Beep(a * 1000, 500);
                 
                 switch (a)
@@ -102,54 +102,117 @@ namespace SigaSom
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            int but = Simon.Last();
             if (nivel == 1 && but == 1)
             {
                 MessageBox.Show("Nivel 1 Concluido");
             }
             else
             {
-                MessageBox.Show("Game Over");
+            }
+
+            if (nivel == 2 && but == 1)
+            {
+                MessageBox.Show("Nivel 2 Concluido");
+            }
+            else
+            {
+            }
+
+            if (nivel == 3 && but == 1)
+            {
+                MessageBox.Show("Nivel 3 Concluido");
+            }
+            else
+            {
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
-            if (nivel == 1 && but == 3)
+            int but = Simon.Last();
+            if (nivel == 1 && but == 2)
             {
                 MessageBox.Show("Nivel 1 Concluido");
             }
             else
             {
-                MessageBox.Show("Game Over");
+            }
+
+            if (nivel == 2 && but == 2)
+            {
+                MessageBox.Show("Nivel 2 Concluido");
+            }
+            else
+            {
+            }
+
+            if (nivel == 3 && but == 2)
+            {
+                MessageBox.Show("Nivel 3 Concluido");
+            }
+            else
+            {
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
-            
+
+            int but = Simon.Last();
             if (nivel == 1 && but == 3)
             {
                 MessageBox.Show("Nivel 1 Concluido");
             }
             else
             {
-                MessageBox.Show("Game Over");
+            }
+
+            if (nivel == 2 && but == 3)
+            {
+                MessageBox.Show("Nivel 2 Concluido");
+            }
+            else
+            {
+            }
+
+            if (nivel == 3 && but == 3)
+            {
+                MessageBox.Show("Nivel 3 Concluido");
+            }
+            else
+            {
             }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            
+            int but = Simon.Last();
             if (nivel == 1 && but == 4)
             {
                 MessageBox.Show("Nivel 1 Concluido");
             }
             else
             {
-                MessageBox.Show("Game Over");
+                
+            }
+
+            if (nivel == 2 && but == 4)
+            {
+                MessageBox.Show("Nivel 2 Concluido");
+            }
+            else
+            {
+                
+            }
+
+            if (nivel == 3 && but == 4)
+            {
+                MessageBox.Show("Nivel 3 Concluido");
+            }
+            else
+            {
+                
             }
         }
     }
