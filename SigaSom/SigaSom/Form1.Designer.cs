@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button_Start = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.aTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // button1
@@ -99,15 +100,10 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Vez do Jogador1";
             // 
-            // label2
+            // aTimer
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(358, 295);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 17);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Vez do Jogador2";
+            this.aTimer.Interval = 500;
+            this.aTimer.Tick += new System.EventHandler(this.aTimer_Tick);
             // 
             // Form1
             // 
@@ -115,7 +111,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Aquamarine;
             this.ClientSize = new System.Drawing.Size(369, 310);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button_Start);
             this.Controls.Add(this.button4);
@@ -139,7 +134,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button_Start;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Timer aTimer;
     }
 }
 

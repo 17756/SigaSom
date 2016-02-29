@@ -40,9 +40,10 @@ namespace SigaSom
         int but;
         List<int> Simon = new List<int>();
         Random rnd = new Random();
+        int count = 1;
 
-        
-        
+
+
         public Form1()
         {
             InitializeComponent();
@@ -50,10 +51,14 @@ namespace SigaSom
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
+            aTimer.Start();
+
+            count = 1;
+
             int som = rnd.Next(4) + 1;
 
             Simon.Add(som);
-
+            
             foreach (int a in Simon ){
                 
                 switch (a)
@@ -66,9 +71,10 @@ namespace SigaSom
                 }
 
                 
-                MessageBox.Show(a.ToString());
+                // MessageBox.Show(a.ToString());
                 Console.Beep(a * 1000, 500);
                 
+
                 switch (a)
                 {
                     case 1: button1.BackColor = Color.Blue; break;
@@ -82,9 +88,10 @@ namespace SigaSom
 
             }
 
-
-
+            count++;
             nivel++;
+           
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -214,6 +221,42 @@ namespace SigaSom
             {
                 
             }
+        }
+
+        private void aTimer_Tick(object sender, EventArgs e)
+        {
+            Simon.ElementAt(1);
+            
+            foreach (int a in Simon)
+            {
+
+                switch (a)
+                {
+                    case 1: button1.BackColor = Color.White; break;
+
+                    case 2: button2.BackColor = Color.White; break;
+                    case 3: button3.BackColor = Color.White; break;
+                    case 4: button4.BackColor = Color.White; break;
+                }
+                Console.Beep(a * 1000, 500);
+
+
+                switch (a)
+                {
+                    case 1: button1.BackColor = Color.Blue; break;
+
+                    case 2: button2.BackColor = Color.Yellow; break;
+                    case 3: button3.BackColor = Color.Red; break;
+                    case 4: button4.BackColor = Color.Green; break;
+                }
+
+
+
+            }
+
+
+
+            nivel++;
         }
     }
 }
