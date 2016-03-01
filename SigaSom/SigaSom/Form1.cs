@@ -40,7 +40,7 @@ namespace SigaSom
         int but;
         List<int> Simon = new List<int>();
         Random rnd = new Random();
-        int count = 1;
+        int count = 0;
 
 
 
@@ -51,52 +51,30 @@ namespace SigaSom
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
+            System.Timers.Timer atimer = new System.Timers.Timer();
+            aTimer.Interval = 1000;
+            aTimer.Enabled = true;
+             count = 0;
+            int som = rnd.Next(4) + 1;
+            Simon.Add(som);
             aTimer.Start();
 
-            count = 1;
-
-            int som = rnd.Next(4) + 1;
-
-            Simon.Add(som);
-            
-            foreach (int a in Simon ){
-                
-                switch (a)
-                {
-                    case 1: button1.BackColor = Color.White; break;
-
-                    case 2: button2.BackColor = Color.White; break;
-                    case 3: button3.BackColor = Color.White; break;
-                    case 4: button4.BackColor = Color.White; break;
-                }
-
-                
-                // MessageBox.Show(a.ToString());
-                Console.Beep(a * 1000, 500);
-                
-
-                switch (a)
-                {
-                    case 1: button1.BackColor = Color.Blue; break;
-
-                    case 2: button2.BackColor = Color.Yellow; break;
-                    case 3: button3.BackColor = Color.Red; break;
-                    case 4: button4.BackColor = Color.Green; break;
-                }
 
 
 
-            }
 
-            count++;
-            nivel++;
            
-            
+
+
+
+            nivel++;
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
             button1.Enabled = true;
             button1.BackColor = Color.Blue;
             button2.Enabled = true;
@@ -201,7 +179,7 @@ namespace SigaSom
             }
             else
             {
-                
+
             }
 
             if (nivel == 2 && but == 4)
@@ -210,7 +188,7 @@ namespace SigaSom
             }
             else
             {
-                
+
             }
 
             if (nivel == 3 && but == 4)
@@ -219,44 +197,48 @@ namespace SigaSom
             }
             else
             {
-                
+
             }
         }
 
         private void aTimer_Tick(object sender, EventArgs e)
         {
-            Simon.ElementAt(1);
-            
-            foreach (int a in Simon)
-            {
 
-                switch (a)
+
+
+
+
+            if (count < nivel)
+            { switch (Simon[count])
                 {
-                    case 1: button1.BackColor = Color.White; break;
-
-                    case 2: button2.BackColor = Color.White; break;
-                    case 3: button3.BackColor = Color.White; break;
-                    case 4: button4.BackColor = Color.White; break;
+                    case 1: button1.BackColor = Color.Black; break;
+                    case 2: button2.BackColor = Color.Black; break;
+                    case 3: button3.BackColor = Color.Black; break;
+                    case 4: button4.BackColor = Color.Black; break;
                 }
-                Console.Beep(a * 1000, 500);
-
-
-                switch (a)
+                Console.Beep(2000 + Simon[count] * 1000, 350);
+                //Thread.Sleep(500);
+            }
+            if (count > 0)
+            {
+                switch (Simon[count - 1])
                 {
                     case 1: button1.BackColor = Color.Blue; break;
-
                     case 2: button2.BackColor = Color.Yellow; break;
                     case 3: button3.BackColor = Color.Red; break;
                     case 4: button4.BackColor = Color.Green; break;
                 }
-
-
-
             }
 
+            if (count == nivel )
+            {
+                aTimer.Stop();
+             
+            }
+               
 
+            count++;
 
-            nivel++;
         }
     }
 }
